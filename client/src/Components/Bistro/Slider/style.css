@@ -26,6 +26,7 @@
   min-height: 100vh;
   width: 100%;
   z-index: 0;
+  will-change: transform;
 }
 
 .slide-text {
@@ -72,12 +73,12 @@
 
 .animated {
   z-index: 1;
-  animation: slide-in 1.5s;
+  animation: slide-in 1s;
 }
 
 .inactive {
   z-index: 2;
-  animation: slide-out 1.5s;
+  animation: slide-out 1.8s;
 }
 
 @keyframes slide-in {
@@ -95,5 +96,25 @@
   }
   100% {
     transform: translateX(-120vw);
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .slide-text {
+    font-size: 30px;
+    left: 30px;
+    bottom: 180px;
+    width: 80%;
+    white-space: normal;
+  }
+  .controls {
+    left: 30px;
+    bottom: 100px;
+  }
+}
+
+@media screen and (max-width: 676px) {
+  .slide-image {
+    min-width: 700px;
   }
 }

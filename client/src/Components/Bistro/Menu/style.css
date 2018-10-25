@@ -9,7 +9,7 @@
   position: relative;
   left: 200px;
   width: calc(100% - 200px);
-  padding: 85px;
+  padding: 85px 40px 85px 85px;
 }
 
 .full-menu {
@@ -62,4 +62,25 @@
 
 .menu-item-description {
   font-weight: 200;
+}
+
+@media screen and (max-width: 1200px) {
+  .full-menu-item {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .menu-wrapper {
+    left: 0;
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .full-menu-item {
+    width: 100%;
+  }
 }
