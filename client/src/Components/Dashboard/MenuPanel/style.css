@@ -1,0 +1,139 @@
+.menu-panel {
+  border-bottom: 1px solid white;
+  margin: 0 0 2rem 0;
+}
+
+.menu-panel-header {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem 0rem;
+  border-bottom: 1px solid white;
+  font-size: 0.9em;
+}
+
+.menu-panel-name {
+  width: 50%;
+  padding: 0.5rem;
+}
+
+.menu-panel-button {
+  width: 50%;
+  text-align: end;
+}
+
+.panel-button {
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 3px;
+  background-color: #ee7147;
+  color: white;
+  height: 50px;
+  width: 100px;
+}
+
+.menu-panel-item {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem 0rem;
+}
+
+.menu-panel-item > div {
+  padding: 1rem 0;
+}
+
+.panel-item-name {
+  width: calc(20% - 16px);
+  margin-right: 1rem;
+}
+
+.panel-item-price {
+  width: calc(10% - 16px);
+  margin-right: 1rem;
+}
+
+.panel-item-description {
+  width: calc(60% - 16px);
+  margin-right: 1rem;
+}
+
+.panel-item-button {
+  width: 10%;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 3px;
+  background-color: #ee7147;
+  color: white;
+  height: 50px;
+}
+
+.add-input-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.add-menu-input {
+  background-color: #eeeeee;
+  border: none;
+  border-radius: 3px 0 0 3px;
+  padding: 1rem 2rem;
+  height: 50px;
+}
+
+.add-menu-button {
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 0 3px 3px 0;
+  background-color: #ee7147;
+  color: white;
+  height: 50px;
+}
+
+.add-menu {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.add-input-container {
+  width: 50%;
+}
+
+.add-menu-message {
+  width: 50%;
+  padding: 0.9rem;
+}
+
+.add-menu-item {
+  padding: 1rem 0;
+}
+
+.add-menu-item > input {
+  padding: 1rem 2rem;
+  background-color: #eeeeee;
+  border: none;
+  border-radius: 3px;
+}
+
+.add-item-name {
+  width: calc(20% - 16px);
+  margin-right: 1rem;
+}
+
+.add-item-price {
+  width: calc(10% - 16px);
+  margin-right: 1rem;
+}
+
+.add-item-description {
+  width: calc(60% - 16px);
+  margin-right: 1rem;
+}
+
+.add-item-button {
+  width: 10%;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 3px;
+  background-color: #ee7147;
+  color: white;
+  height: 50px;
+}

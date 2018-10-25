@@ -1,0 +1,99 @@
+.slider {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.slide {
+  z-index: 0;
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  will-change: transform;
+}
+
+.slide-overlay {
+  z-index: 1;
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.slide-image {
+  min-height: 100vh;
+  width: 100%;
+  z-index: 0;
+}
+
+.slide-text {
+  position: absolute;
+  left: 285px;
+  z-index: 2;
+  color: white;
+  font-size: 72px;
+  bottom: 250px;
+  font-weight: 600;
+}
+
+.slider-controls {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  z-index: 3;
+}
+
+.controls {
+  position: absolute;
+  display: flex;
+  left: 285px;
+  bottom: 80px;
+}
+
+.dot {
+  height: 10px;
+  width: 10px;
+  border: 1px solid white;
+  margin: 0 30px 0 0;
+  transform: rotate(45deg);
+  background-color: transparent;
+  transition-duration: 0.5s;
+}
+
+.dot:hover {
+  background-color: white;
+}
+
+.active {
+  background-color: white;
+}
+
+.animated {
+  z-index: 1;
+  animation: slide-in 1.5s;
+}
+
+.inactive {
+  z-index: 2;
+  animation: slide-out 1.5s;
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateX(400px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-out {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-120vw);
+  }
+}
