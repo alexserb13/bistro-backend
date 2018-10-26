@@ -3,7 +3,9 @@ import "./style.css";
 
 class Contact extends Component {
   componentDidMount() {
+    //window.onload = () => {
     this.getMap();
+    //};
   }
 
   getMap = () => {
@@ -27,7 +29,7 @@ class Contact extends Component {
         )
       );
     });
-    console.log(ymaps);
+    //console.log(ymaps);
   };
 
   render() {

@@ -107,7 +107,7 @@
 }
 
 .add-menu-item > input {
-  padding: 1rem 2rem;
+  padding: 1rem 1rem;
   background-color: #eeeeee;
   border: none;
   border-radius: 3px;
@@ -124,16 +124,79 @@
 }
 
 .add-item-description {
-  width: calc(60% - 16px);
+  width: calc(58% - 16px);
   margin-right: 1rem;
 }
 
 .add-item-button {
-  width: 10%;
+  width: 12%;
   padding: 1rem 2rem;
   border: none;
   border-radius: 3px;
   background-color: #ee7147;
   color: white;
   height: 50px;
+}
+
+@media screen and (max-width: 992px) {
+  .add-item-name {
+    width: calc(50%);
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .add-item-price {
+    width: calc(50% - 16px);
+    margin-right: 0rem;
+    margin-bottom: 1rem;
+  }
+
+  .add-item-description {
+    width: calc(70% - 16px);
+    margin-right: 1rem;
+  }
+  .add-item-button {
+    width: 30%;
+  }
+
+  .panel-item-name {
+    width: calc(50% - 16px);
+    margin-right: 1rem;
+  }
+
+  .panel-item-price {
+    width: calc(50% - 16px);
+    margin-right: 1rem;
+  }
+
+  .panel-item-description {
+    width: calc(70% - 16px);
+    margin-right: 1rem;
+  }
+  .panel-item-button {
+    width: 30%;
+    padding: 1rem 1rem;
+    border: none;
+    border-radius: 3px;
+    background-color: #ee7147;
+    color: white;
+    height: 50px;
+  }
+
+  .add-input-container {
+    width: 100%;
+  }
+  .add-menu-message {
+    width: 100%;
+    height: 50px;
+  }
+  .add-menu-input {
+    width: 70%;
+  }
+  .add-menu-button {
+    width: 30%;
+  }
+  .menu-panel-name {
+    font-size: 0.8em;
+  }
 }

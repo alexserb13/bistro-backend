@@ -31,7 +31,13 @@ class Navigation extends Component {
             <div className="btn-line" />
           </div>
           <div className="nav-brand">
-            <a href="#slider">Bistro</a>
+            <a
+              href="#slider"
+              onClick={() => {
+                this.handleOpenMenu();
+              }}>
+              Bistro
+            </a>
           </div>
         </div>
         <div className="nav-menu">

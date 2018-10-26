@@ -10,6 +10,13 @@ class MenuPanel extends Component {
     isError: false
   };
 
+  handleKeyPress = (e, index) => {
+    if (e.key === "Enter") {
+      this.handleAddItem(index);
+      console.log("enter");
+    }
+  };
+
   handleItemDelete = (itemId, menuId) => {
     let token = localStorage.getItem("token");
     axios({
@@ -62,7 +69,9 @@ class MenuPanel extends Component {
         .then(res => {
           this.props.menu.items = res.data.items;
           this.setState({
-            isError: false
+            name: "",
+            price: "",
+            description: ""
           });
         });
     }
@@ -104,11 +113,16 @@ class MenuPanel extends Component {
               handleItemDelete={this.handleItemDelete}
             />
           ))}
-          <div className="add-menu-item">
+          <div
+            className="add-menu-item"
+            onKeyPress={e => {
+              this.handleKeyPress(e, menu._id);
+            }}>
             <input
               className="add-item-name"
               placeholder="Name"
               name="name"
+              value={this.state.name}
               onChange={e => {
                 this.handleInput(e);
               }}
@@ -117,6 +131,7 @@ class MenuPanel extends Component {
               className="add-item-price"
               placeholder="Price"
               name="price"
+              value={this.state.price}
               onChange={e => {
                 this.handleInput(e);
               }}
@@ -125,6 +140,7 @@ class MenuPanel extends Component {
               className="add-item-description"
               placeholder="Description"
               name="description"
+              value={this.state.description}
               onChange={e => {
                 this.handleInput(e);
               }}

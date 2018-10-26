@@ -19,6 +19,7 @@
 }
 
 .about-image {
+  will-change: transform;
   height: 100vh;
   width: 100%;
 }

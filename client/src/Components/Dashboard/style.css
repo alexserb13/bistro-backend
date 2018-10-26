@@ -42,3 +42,13 @@
   color: white;
   background-color: #2f3439;
 }
+
+@media screen and (max-width: 992px) {
+  .dashboard-header-brand {
+    font-size: 0.75em;
+    padding: 0.5rem;
+  }
+  .dashboard-container {
+    margin: 0;
+  }
+}

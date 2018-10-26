@@ -14,13 +14,14 @@ class Bistro extends Component {
   };
 
   componentDidMount() {
+    let html = document.querySelector("html");
+
     window.onload = () => {
-      let html = document.querySelector("html");
       let mask = document.querySelector(".loading-mask");
       mask.classList.add("loaded");
       setTimeout(() => {
         mask.style.display = "none";
-      }, 2000);
+      }, 2500);
       html.style.overflowY = "scroll";
     };
     window.addEventListener("scroll", this.handleScroll);

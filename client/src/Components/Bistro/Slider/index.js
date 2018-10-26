@@ -93,6 +93,7 @@ class Slider extends Component {
     slides[currentSlide].classList.add("animated");
     dots[currentSlide].classList.add("active");
     setTimeout(() => {
+      //console.log(slides, this.state.prevSlide);
       slides[this.state.prevSlide].classList.remove("inactive");
     }, 1000);
   };

@@ -11,12 +11,26 @@ class Dashboard extends Component {
     menuList: []
   };
 
+  handleKeyPress = e => {
+    if (e.key === "Enter") {
+      this.handleAddMenu();
+    }
+  };
+
   componentDidMount() {
+    let html = document.querySelector("html");
+    html.style.overflowY = "scroll";
+
     this.props.checkAuth().then(isValid => {
       if (isValid) {
         this.getMenuList();
       }
     });
+  }
+
+  componentWillUnmount() {
+    let html = document.querySelector("html");
+    html.style.overflow = "hidden";
   }
 
   getMenuList = () => {
@@ -67,6 +81,7 @@ class Dashboard extends Component {
           let { menuList } = this.state;
           menuList.push(res.data);
           this.setState({
+            name: "",
             menuList: menuList
           });
         });
@@ -122,12 +137,17 @@ class Dashboard extends Component {
           </div>
         </div>
         <div className="dashboard-container">
-          <div className="add-menu">
+          <div
+            className="add-menu"
+            onKeyPress={e => {
+              this.handleKeyPress(e);
+            }}>
             <div className="add-input-container">
               <input
                 className="add-menu-input"
                 placeholder="Menu name"
                 name="name"
+                value={this.state.name}
                 onChange={e => {
                   this.handleInput(e);
                 }}
