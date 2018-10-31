@@ -2,8 +2,7 @@
 
 # dependencies
 /node_modules
-/public
-/src
+
 
 # testing
 /coverage
