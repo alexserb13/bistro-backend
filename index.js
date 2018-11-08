@@ -3,9 +3,12 @@ const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const passport = require("passport");
 const db = require("./config/db");
+const path = require("path");
 
 require("./config/passport");
 const app = express();
+
+//app.use(express.static(path.join(__dirname, "./client/build")));
 
 //Body Parser
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -34,7 +37,7 @@ app.use("/menu", Menu);
 let port = process.env.PORT || 5000;
 
 app.get("*", (req, res) => {
-  res.send("Index route!");
+  res.send("Index Route!");
 });
 
 app.listen(port, () => {
